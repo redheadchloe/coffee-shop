@@ -299,7 +299,8 @@ nav {
 // key visual
 .bg {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .05)), url(../img/bg_main.jpeg) no-repeat center;
     background-size: cover;
     color: #fff;
@@ -847,10 +848,16 @@ footer {
 
 // about page
 .page {
-    .about {
+
+    .about,
+    .action {
         background: #fff;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         color: #333;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        height: fit-content;
+    }
+
+    .about {
 
         img {
             max-width: 500px;
@@ -886,6 +893,7 @@ footer {
 }
 
 .action {
+    height: auto;
 
     .grid-4 {
         align-items: flex-start;
@@ -1327,14 +1335,13 @@ footer {
     }
 
     .page {
-        height: 80vh;
+
 
         .about {
             padding: 0;
 
 
             .vertical {
-                display: none;
 
                 &::before {
                     left: 0;
@@ -1353,11 +1360,7 @@ footer {
         }
     }
 
-    .action {
-        &.width {
-            width: 90vw;
-        }
-    }
+
 
 
     .menu {
