@@ -977,13 +977,26 @@ footer {
 
 // blog page
 .blog {
-    .flex-center {
-        gap: 1rem;
 
-        button {
-            background: var(--primary);
-            padding: .3rem .6rem;
+    .container {
+        &.grid {
+            grid-template-columns: 20% 80%;
+            place-items: start center;
         }
+
+        .btn {
+            width: 100%;
+
+            button {
+                display: block;
+                width: inherit;
+                background: var(--primary);
+                padding: .3rem .6rem;
+                outline: 1px solid #333;
+            }
+        }
+
+
     }
 
     .blog-wrapper {
@@ -1365,6 +1378,14 @@ footer {
         .menu-item {
             .flex {
                 flex-direction: row;
+            }
+        }
+    }
+
+    .blog {
+        .container {
+            &.grid {
+                grid-template-columns: auto;
             }
         }
     }
